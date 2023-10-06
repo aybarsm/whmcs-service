@@ -1,0 +1,33 @@
+{
+  "name": "aybarsm/whmcs-service",
+  "description": "Helper service class for WHMCS",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "aybarsm",
+    "php",
+    "whmcs",
+    "service"
+  ],
+  "homepage": "https://github.com/aybarsm/whmcs-service",
+  "authors": [
+    {
+      "name": "Murat Aybars",
+      "email": "hello@aybarsm.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "Aybarsm\\Whmcs\\Service\\": "src/"
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "optimize-autoloader": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
