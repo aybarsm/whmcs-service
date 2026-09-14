@@ -8,9 +8,8 @@ class URL
 {
     protected static function resolve(string|\Stringable $baseUrl, string|\Stringable ...$parts): string
     {
-        $parts = array_map(static fn ($part) => trim(trim(trim((string) $part))), $parts);
-        $baseUrl = trim(trim(trim($baseUrl), '/'));
         array_unshift($parts, $baseUrl);
+        $parts = array_map(static fn ($part) => trim(trim(trim((string) $part), '/')), $parts);
         return implode('/', $parts);
     }
 
