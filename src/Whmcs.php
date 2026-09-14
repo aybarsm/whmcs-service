@@ -54,7 +54,4 @@ class Whmcs extends AbstractWhmcs implements WhmcsInterface
         header("Location: {$url}");
         exit();
     }
-
-
-
 }
