@@ -18,7 +18,7 @@ class URL
         return static::resolve(Whmcs::getSystemUrl(), ...$parts);
     }
 
-    public static function systemDomainUrl(string|\Stringable ...$parts): string
+    public static function systemDomain(string|\Stringable ...$parts): string
     {
         return static::resolve(\WHMCS\Config\Setting::getValue('Domain'), ...$parts);
     }
