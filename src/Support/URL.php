@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Aybarsm\Whmcs\Service\Support;
 use Aybarsm\Whmcs\Service\Whmcs;
+
 class URL
 {
     protected static function resolve(string|\Stringable $baseUrl, string|\Stringable ...$parts): string

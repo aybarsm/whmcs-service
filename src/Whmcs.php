@@ -17,6 +17,13 @@ class Whmcs extends AbstractWhmcs implements WhmcsInterface
 {
     use Path, Invoice, GatewayModule, Transaction, Security, Macros, Lang;
 
+    public static function init(): void
+    {
+        if (! static::getContainer()->has(WhmcsService::class)) {
+            static::getContainer()->register(WhmcsServiceServiceProvider::class);
+        }
+    }
+
     public static function getContainer(): \WHMCS\Container
     {
         return \WHMCS\Application\Support\Facades\Di::getFacadeApplication();
